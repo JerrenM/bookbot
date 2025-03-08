@@ -13,3 +13,15 @@ def count_chars(text):
 		else:
 			char_counts[char] = 1
 	return char_counts
+
+def sort_dict(dictionary):
+	report = []
+	for key, value in dictionary.items():
+		if key.isalpha():
+			char_info = {"key": key, "value": value}
+			report.append(char_info)
+	report.sort(reverse=True, key=lambda char_info:char_info["value"])
+	
+	
+	
+	return report
